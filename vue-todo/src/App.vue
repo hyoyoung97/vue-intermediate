@@ -18,7 +18,7 @@ import TodoFooter from './components/TodoFooter.vue'
 export default {
   name: 'App',
   components: {
-    //컴포넌트 태그명: 컴포넌트 내용
+    //컴포넌트 태그명: 컴포넌트 내용 (import 한 이름)
     'TodoHeader': TodoHeader,
     'TodoInput': TodoInput,
     'TodoList': TodoList,

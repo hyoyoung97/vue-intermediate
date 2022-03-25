@@ -2,8 +2,11 @@
   <div>
     <ul>
       <li v-for="(todoItem, index) in todoItems" :key="todoItem.item" class="shadow">
-        <i class="checkBtn fa-solid fa-check" :class="{checkBtnCompleted: todoItem.completed}" @click="toggleComplete(todoItem)"></i>
+        <!--체크 아이콘-->
+        <i class="checkBtn fa-solid fa-check" :class="{checkBtnCompleted: todoItem.completed}"
+           @click="toggleComplete(todoItem)"></i>
         <span :class="{textCompleted: todoItem.completed}">{{ todoItem.item }}</span>
+        <!--휴지통 아이콘-->
         <span class="removeBtn" @click="removeTodo((todoItem, index))">
           <i class="fa-solid fa-trash-can"></i>
         </span>
@@ -36,6 +39,7 @@ export default {
     },
     toggleComplete: function (todoItem) {
       todoItem.completed = !todoItem.completed;
+      // update 역할
       localStorage.removeItem(todoItem.item);
       localStorage.setItem(todoItem.item, JSON.stringify(todoItem));
     }

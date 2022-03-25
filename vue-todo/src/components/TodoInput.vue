@@ -1,7 +1,7 @@
 <template>
   <div class="inputBox shadow">
     <input type="text" v-model="newTodoItem" @keyup.enter="addTodo">
-<!--    <button @click="addTodo">add</button>-->
+    <!--<button @click="addTodo">add</button>-->
     <span class="addContainer" @click="addTodo">
       <i class="fa-solid fa-plus addBtn"></i>
     </span>
@@ -37,16 +37,19 @@ export default {
 input:focus {
   outline: none;
 }
+
 .inputBox {
   background: white;
   height: 50px;
   line-height: 50px;
   border-radius: 5px;
 }
+
 .inputBox input {
   border-style: none;
   font-size: 0.9rem;
 }
+
 .addContainer {
   float: right;
   background: linear-gradient(to right, #6478FB, #8763FB);
@@ -54,8 +57,9 @@ input:focus {
   width: 3rem;
   border-radius: 0 5px 5px 0;
 }
+
 .addBtn {
   color: white;
-vertical-align: middle;
+  vertical-align: middle;
 }
 </style>
